@@ -4,9 +4,9 @@
 
 /* .App {
   text-align: center;
-}
+} */
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -15,16 +15,12 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
 } */
-
 #root {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: calc(10px + 2vmin);
 }
 
 .App {
@@ -35,4 +31,66 @@
   margin-top: 5vh;
   margin-bottom: 5vh;
   background-color: blanchedalmond;
+  display: grid;
+  grid-template-rows: 1.5fr 7fr 1.5fr;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.header-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding-left: 5vw;
+}
+
+.main {
+  padding-right: 5vw;
+  padding-left: 5vw;
+}
+
+.portfolio-link {
+  color: #03617a;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.portfolio-link:hover {
+  color: rgb(167, 59, 113);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-text {
+  width: 100%;
+  padding-right: 5vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media (max-width: 560px) {
+  .header-title {
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .main {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .footer-text {
+    justify-content: center;
+    padding-right: 0;
+  }
 }
