@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Welcome.css';
 
 function Welcome() {
@@ -11,7 +12,9 @@ function Welcome() {
       </div>
       <div className="welcome-buttons">
         <button className="login-button">Log In</button>
-        <button className="signup-button">Sign Up</button>
+        <Link to="/signup">
+          <button className="signup-button">Sign Up</button>
+        </Link>
       </div>
     </div>
   );

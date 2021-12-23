@@ -1,0 +1,8 @@
+.signup {
+  background-color: cadetblue;
+}
+
+.signup-message {
+  display: flex;
+  padding: 5vh;
+}
