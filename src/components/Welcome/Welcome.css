@@ -1,0 +1,54 @@
+.welcome {
+  background-color: cadetblue;
+}
+
+.welcome-message {
+  display: flex;
+  padding: 5vh;
+  gap: 2vw;
+}
+
+.welcome-message h2 {
+  text-align: left;
+}
+
+.welcome-message p {
+  text-align: justify;
+}
+
+.welcome-buttons {
+  padding: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 3vw;
+}
+
+.login-button,
+.signup-button {
+  padding: 2vh;
+  font-size: large;
+  min-width: 10vw;
+  cursor: pointer;
+}
+
+@media (max-width: 560px) {
+  .welcome-message {
+    display: grid;
+  }
+
+  .welcome-buttons {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    align-items: inherit;
+    gap: 3vh;
+  }
+
+  .login-button,
+  .signup-button {
+    padding: 3vh;
+    font-size: large;
+  }
+}
