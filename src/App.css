@@ -49,10 +49,17 @@
   padding-left: 5vw;
 }
 
-.header-app-logo {
+.header-title a {
   width: 8%;
   margin: 1%;
   order: 1;
+}
+
+.header-app-logo {
+  width: 100%;
+  height: 100%;
+  /* margin: 1%; */
+  /* order: 1; */
 }
 
 .header-title-text-mern {
@@ -101,9 +108,13 @@
     padding-left: 0;
   }
 
-  .header-app-logo {
+  .header-title a {
     order: 2;
   }
+
+  /* .header-app-logo {
+    order: 2;
+  } */
 
   .header-title-text-mern {
     order: 1;
