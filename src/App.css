@@ -49,6 +49,22 @@
   padding-left: 5vw;
 }
 
+.header-app-logo {
+  width: 8%;
+  margin: 1%;
+  order: 1;
+}
+
+.header-title-text-mern {
+  margin: 0.5%;
+  order: 2;
+}
+
+.header-title-text-tdl {
+  margin: 0.5%;
+  order: 3;
+}
+
 .main {
   padding-right: 5vw;
   padding-left: 5vw;
@@ -58,6 +74,7 @@
   color: #03617a;
   text-decoration: none;
   font-weight: bolder;
+  margin: 1%;
 }
 
 .portfolio-link:hover {
@@ -82,6 +99,18 @@
   .header-title {
     justify-content: center;
     padding-left: 0;
+  }
+
+  .header-app-logo {
+    order: 2;
+  }
+
+  .header-title-text-mern {
+    order: 1;
+  }
+
+  .header-title-text-tdl {
+    order: 3;
   }
 
   .main {
