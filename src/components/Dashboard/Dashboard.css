@@ -32,12 +32,13 @@
   width: 65%;
 } */
 
-.dashboard-buttons {
+.dashboard-buttons-div {
   padding: 5vh;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  gap: 3vw;
 }
 
 .button {
@@ -52,7 +53,7 @@
     display: grid;
   }
 
-  .dashboard-buttons {
+  .dashboard-buttons-div {
     display: flex;
     flex-direction: column;
     padding: 0;

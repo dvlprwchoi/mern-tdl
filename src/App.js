@@ -6,6 +6,7 @@ import Main from './components/Main/Main';
 import Signup from './components/Signup/Signup';
 import Login from './components/Login/Login';
 import Dashboard from './components/Dashboard/Dashboard';
+import Logout from './components/Logout/Logout';
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
           </Route>
           <Route exact path="/dashboard">
             <Dashboard />
+          </Route>
+          <Route exact path="/logout">
+            <Logout />
           </Route>
         </Switch>
         <Footer />

@@ -18,7 +18,7 @@
   color: var(--regular-color);
 }
 
-.welcome-buttons {
+.welcome-buttons-div {
   padding: 5vh;
   display: flex;
   flex-direction: row;
@@ -40,7 +40,7 @@
     display: grid;
   }
 
-  .welcome-buttons {
+  .welcome-buttons-div {
     display: flex;
     flex-direction: column;
     padding: 0;

@@ -36,8 +36,8 @@ function Login() {
                 required
               />
             </div>
-            <div className="login-button-div">
-              <button className="login-button-2">Log In</button>
+            <div className="login-button-div buttons-div">
+              <button className="login-button-2 button">Log In</button>
             </div>
           </form>
         </div>

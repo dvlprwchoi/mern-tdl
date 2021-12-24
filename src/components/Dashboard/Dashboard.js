@@ -9,7 +9,7 @@ function Dashboard() {
           <h2>Good morning, "Stranger!"</h2>
           <p>You can add, edit, delete, clear</p>
         </div>
-        <div className="dashboard-buttons">
+        <div className="dashboard-buttons-div buttons-div">
           <Link to="/logout">
             <button className="logout-button button">Log Out</button>
           </Link>

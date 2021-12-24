@@ -36,8 +36,8 @@ function Signup() {
                 required
               />
             </div>
-            <div className="create-button-div">
-              <button className="create-button">Create</button>
+            <div className="create-button-div buttons-div">
+              <button className="create-button button">Create</button>
             </div>
           </form>
         </div>

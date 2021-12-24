@@ -13,7 +13,7 @@ function Logout() {
             click one of buttons below!
           </p>
         </div>
-        <div className="logout-buttons-div">
+        <div className="logout-buttons-div buttons-div">
           <Link to="/">
             <button className="home-button button">Home</button>
           </Link>
