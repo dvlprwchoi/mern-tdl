@@ -7,3 +7,48 @@
   padding: 5vh;
   color: var(--highlight-color-2);
 }
+
+.create-username-div,
+.create-password-div {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  margin-top: 3vh;
+}
+
+.username-input-box,
+.password-input-box {
+  width: 65%;
+}
+
+.create-button-div {
+  padding: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.create-button {
+  font-size: large;
+  padding: 2vh;
+  min-width: 10vw;
+  cursor: pointer;
+}
+
+@media (max-width: 560px) {
+  .signup-message {
+    justify-content: center;
+  }
+
+  .create-button-div {
+    padding: 0;
+    margin-top: 3vh;
+  }
+
+  .create-button {
+    width: 100%;
+    padding: 3vh;
+  }
+}
