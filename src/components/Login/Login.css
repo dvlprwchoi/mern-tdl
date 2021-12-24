@@ -1,15 +1,15 @@
-.signup {
-  background-color: var(--regular-color);
+.login {
+  background-color: var(--main-board-color);
 }
 
-.signup-message {
+.login-message {
   display: flex;
   padding: 5vh;
   color: var(--highlight-color-2);
 }
 
-.create-username-div,
-.create-password-div {
+.login-username-div,
+.login-password-div {
   display: flex;
   justify-content: space-between;
   padding-left: 5vw;
@@ -17,12 +17,12 @@
   margin-top: 3vh;
 }
 
-.username-input-box,
-.password-input-box {
+.login-username-input-box,
+.login-password-input-box {
   width: 65%;
 }
 
-.create-button-div {
+.login-button-div {
   padding: 5vh;
   display: flex;
   flex-direction: row;
@@ -30,7 +30,7 @@
   align-items: center;
 }
 
-.create-button {
+.login-button-2 {
   font-size: large;
   padding: 2vh;
   min-width: 10vw;
@@ -38,16 +38,16 @@
 }
 
 @media (max-width: 560px) {
-  .signup-message {
+  .login-message {
     justify-content: center;
   }
 
-  .create-button-div {
+  .login-button-div {
     padding: 0;
     margin-top: 3vh;
   }
 
-  .create-button {
+  .login-button-2 {
     width: 100%;
     padding: 3vh;
   }
