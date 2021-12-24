@@ -1,5 +1,5 @@
 .welcome {
-  background-color: cadetblue;
+  background-color: var(--main-board-color);
 }
 
 .welcome-message {
@@ -10,10 +10,12 @@
 
 .welcome-message h2 {
   text-align: left;
+  color: var(--highlight-color-2);
 }
 
 .welcome-message p {
   text-align: justify;
+  color: var(--regular-color);
 }
 
 .welcome-buttons {

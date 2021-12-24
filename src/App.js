@@ -8,7 +8,7 @@ import Signup from './components/Signup/Signup';
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App" theme="light">
         <Header />
         <Switch>
           <Route exact path="/">

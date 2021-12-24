@@ -1,8 +1,9 @@
 .signup {
-  background-color: cadetblue;
+  background-color: var(--main-board-color);
 }
 
 .signup-message {
   display: flex;
   padding: 5vh;
+  color: var(--highlight-color-2);
 }
