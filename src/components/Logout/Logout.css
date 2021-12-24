@@ -1,0 +1,53 @@
+.logout {
+  background-color: var(--highlight-color);
+}
+
+.logout-message {
+  display: flex;
+  padding: 5vh;
+  color: var(--highlight-color-2);
+}
+
+.logout-message h2 {
+  text-align: left;
+  color: var(--highlight-color-2);
+}
+
+.logout-message p {
+  text-align: justify;
+  color: var(--regular-color);
+}
+.logout-buttons-div {
+  padding: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 3vw;
+}
+
+.button {
+  font-size: large;
+  padding: 2vh;
+  min-width: 10vw;
+  cursor: pointer;
+}
+
+@media (max-width: 560px) {
+  .logout-message {
+    display: grid;
+  }
+
+  .logout-buttons-div {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    align-items: inherit;
+    gap: 3vh;
+  }
+
+  .button {
+    width: 100%;
+    padding: 3vh;
+  }
+}
