@@ -50,6 +50,7 @@
 
   .login-button,
   .signup-button {
+    width: 100%;
     padding: 3vh;
     font-size: large;
   }
