@@ -45,6 +45,12 @@
   grid-template-rows: 1.5fr 7fr 1.5fr;
 }
 
+input {
+  border: none;
+  border-radius: 1rem;
+  padding-left: 2%;
+}
+
 .header {
   display: flex;
   justify-content: center;
