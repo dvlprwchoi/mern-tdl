@@ -5,11 +5,12 @@ import Footer from './components/Footer/Footer';
 import Routes from './components/Routes/Routes';
 
 function App() {
+  const username = 'Stranger';
   return (
     <Router>
       <div className="App" theme="light">
         <Header />
-        <Routes />
+        <Routes username={username} />
         <Footer />
       </div>
     </Router>

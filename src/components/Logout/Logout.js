@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 import './Logout.css';
 
-function Logout() {
+function Logout({ username }) {
   return (
     <div className="main">
       <div className="logout">
         <div className="logout-message">
-          <h2>Logout Page</h2>
+          <h2>Good bye, {username}.</h2>
           <p>Hope to see you soon!</p>
           <p>
             It will automatically redirect to the main page. Otherwise, you can
