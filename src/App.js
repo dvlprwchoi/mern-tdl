@@ -1,10 +1,11 @@
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Main from './components/Main/Main';
-import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Signup from './components/Signup/Signup';
 import Login from './components/Login/Login';
+import Dashboard from './components/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -13,17 +14,16 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/">
-            {/* <Header /> */}
             <Main />
-            {/* <Footer /> */}
           </Route>
           <Route exact path="/login">
             <Login />
           </Route>
           <Route exact path="/signup">
-            {/* <Header /> */}
             <Signup />
-            {/* <Footer /> */}
+          </Route>
+          <Route exact path="/dashboard">
+            <Dashboard />
           </Route>
         </Switch>
         <Footer />
