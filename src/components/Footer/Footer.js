@@ -7,6 +7,7 @@ function Footer() {
           className="portfolio-link"
           href="https://www.woosikchoi.com"
           target="_blank"
+          rel="noopenner noreferrer"
         >
           WOO-SIK CHOI
         </a>{' '}
