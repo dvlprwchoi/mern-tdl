@@ -30,13 +30,6 @@
   align-items: center;
 }
 
-.create-button {
-  font-size: large;
-  padding: 2vh;
-  min-width: 10vw;
-  cursor: pointer;
-}
-
 @media (max-width: 560px) {
   .signup-message {
     justify-content: center;
@@ -45,10 +38,5 @@
   .create-button-div {
     padding: 0;
     margin-top: 3vh;
-  }
-
-  .create-button {
-    width: 100%;
-    padding: 3vh;
   }
 }

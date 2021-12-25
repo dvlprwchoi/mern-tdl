@@ -27,14 +27,6 @@
   gap: 3vw;
 }
 
-.login-button,
-.signup-button {
-  padding: 2vh;
-  font-size: large;
-  min-width: 10vw;
-  cursor: pointer;
-}
-
 @media (max-width: 560px) {
   .welcome-message {
     display: grid;
@@ -46,12 +38,5 @@
     padding: 0;
     align-items: inherit;
     gap: 3vh;
-  }
-
-  .login-button,
-  .signup-button {
-    width: 100%;
-    padding: 3vh;
-    font-size: large;
   }
 }

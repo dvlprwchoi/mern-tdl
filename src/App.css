@@ -36,9 +36,10 @@
 .App {
   min-width: 360px;
   width: 80vw;
-  min-height: 600px;
+  /* min-height: 600px; */
+  /* min-height: 100vh; */
   height: 90vh;
-  margin-top: 5vh;
+  margin-top: 2vh;
   margin-bottom: 5vh;
   background-color: var(--background-color);
   display: grid;
@@ -121,6 +122,22 @@ input {
   align-items: center;
 }
 
+.button {
+  font-size: large;
+  padding: 2vh;
+  min-width: 10vw;
+  cursor: pointer;
+  border-radius: 2rem;
+}
+
+.button-small {
+  font-size: medium;
+  padding: 1vh;
+  min-width: 10vw;
+  cursor: pointer;
+  border-radius: 2rem;
+}
+
 @media (max-width: 560px) {
   .header-title {
     justify-content: center;
@@ -151,5 +168,15 @@ input {
   .footer-text {
     justify-content: center;
     padding-right: 0;
+  }
+
+  .button {
+    width: 100%;
+    padding: 3vh;
+  }
+
+  .button-small {
+    padding: 0.5vh;
+    font-size: small;
   }
 }

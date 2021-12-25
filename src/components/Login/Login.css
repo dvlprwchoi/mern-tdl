@@ -30,13 +30,6 @@
   align-items: center;
 }
 
-.login-button-2 {
-  font-size: large;
-  padding: 2vh;
-  min-width: 10vw;
-  cursor: pointer;
-}
-
 @media (max-width: 560px) {
   .login-message {
     justify-content: center;
@@ -45,10 +38,5 @@
   .login-button-div {
     padding: 0;
     margin-top: 3vh;
-  }
-
-  .login-button-2 {
-    width: 100%;
-    padding: 3vh;
   }
 }
