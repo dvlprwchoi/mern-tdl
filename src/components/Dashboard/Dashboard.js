@@ -14,7 +14,7 @@ function Dashboard() {
   const _addTodo = (e) => {
     e.preventDefault();
     if (!todoInput) return;
-    const newTodo = { completed: false, text: todoInput };
+    const newTodo = { checked: false, text: todoInput };
     const newTodos = [...todos, newTodo];
     setTodos(newTodos);
     setTodoInput('');
@@ -23,8 +23,9 @@ function Dashboard() {
 
   const toggleCheckbox = (index) => {
     const newCheckboxTodos = [...todos];
-    newCheckboxTodos[index].completed = !newCheckboxTodos[index].completed;
+    newCheckboxTodos[index].checked = !newCheckboxTodos[index].checked;
     setTodos(newCheckboxTodos);
+    postTodos(newCheckboxTodos);
   };
 
   const postTodos = (newTodos) => {
@@ -61,18 +62,14 @@ function Dashboard() {
           <div className="todo-list-board">
             {todos.map((singleTodo, index) => (
               <div className="single-todo" key={index}>
-                <input type="checkbox" onClick={() => toggleCheckbox(index)} />
+                <input
+                  type="checkbox"
+                  checked={singleTodo.checked}
+                  onChange={() => toggleCheckbox(index)}
+                />
                 <label>{singleTodo.text}</label>
               </div>
             ))}
-            {/* <li>CCC</li>
-            <li>CCC</li>
-            <li>CCC</li>j
-            <li>CCC</li>
-            <li>CCC</li>
-            <li>CCC</li>
-            <li>CCC</li>
-            <li>CCC</li> */}
           </div>
           <div className="add-todo-list-div">
             <form className="add-todo-list-form" onSubmit={_addTodo}>
