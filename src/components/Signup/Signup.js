@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react/cjs/react.development';
 import './Signup.css';
 
@@ -5,6 +6,7 @@ function Signup() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const _error = async (response) => {
     if (!response.ok) {
@@ -29,7 +31,9 @@ function Signup() {
       }),
     })
       .then(_error)
-      .then(() => {})
+      .then(() => {
+        navigate('/dashboard');
+      })
       .catch((error) => {
         setError(error.message);
       });
