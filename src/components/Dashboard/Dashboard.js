@@ -14,8 +14,14 @@ function Dashboard() {
   const _addTodo = (e) => {
     e.preventDefault();
     if (!todoInput) return;
-    setTodos([...todos, { text: todoInput }]);
+    setTodos([...todos, { completed: false, text: todoInput }]);
     setTodoInput('');
+  };
+
+  const toggleCheckbox = (index) => {
+    const newTodos = [...todos];
+    newTodos[index].completed = !newTodos[index].completed;
+    setTodos(newTodos);
   };
 
   return (
@@ -29,7 +35,7 @@ function Dashboard() {
           <div className="todo-list-board">
             {todos.map((todo, index) => (
               <div className="single-todo" key={index}>
-                <input type="checkbox" />
+                <input type="checkbox" onClick={() => toggleCheckbox(index)} />
                 <label>{todo.text}</label>
               </div>
             ))}
