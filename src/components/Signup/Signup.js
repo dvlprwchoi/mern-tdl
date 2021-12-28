@@ -4,6 +4,17 @@ import './Signup.css';
 function Signup() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const _error = async (response) => {
+    if (!response.ok) {
+      // console.log(response);
+      const { message } = await response.json();
+      console.log('Error Message: ', message);
+      throw Error(message);
+    }
+    return response.json();
+  };
 
   const _create = (e) => {
     e.preventDefault();
@@ -16,7 +27,12 @@ function Signup() {
         username,
         password,
       }),
-    });
+    })
+      .then(_error)
+      .then(() => {})
+      .catch((error) => {
+        setError(error.message);
+      });
   };
 
   return (
@@ -24,6 +40,7 @@ function Signup() {
       <div className="signup">
         <div className="signup-message">
           <h2>Sign Up Page</h2>
+          {!!error && <span style={{ color: 'red' }}>{error}</span>}
         </div>
         <div className="create-user">
           <form className="create-user-form" onSubmit={_create}>
