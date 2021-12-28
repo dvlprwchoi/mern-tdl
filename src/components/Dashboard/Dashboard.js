@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Dashboard.css';
 
@@ -38,6 +38,18 @@ function Dashboard() {
     }).then(() => {});
   };
 
+  useEffect(() => {
+    fetch(`http://localhost:4000/todos`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Basic ${credentials.username}:${credentials.password}`,
+      },
+    })
+      .then((response) => response.json())
+      .then((todo) => setTodos(todo));
+  }, []);
+
   return (
     <div className="main">
       <div className="dashboard">
@@ -47,10 +59,10 @@ function Dashboard() {
         </div>
         <div className="todo-list-container">
           <div className="todo-list-board">
-            {todos.map((todo, index) => (
+            {todos.map((singleTodo, index) => (
               <div className="single-todo" key={index}>
                 <input type="checkbox" onClick={() => toggleCheckbox(index)} />
-                <label>{todo.text}</label>
+                <label>{singleTodo.text}</label>
               </div>
             ))}
             {/* <li>CCC</li>
