@@ -1,12 +1,17 @@
 import { Link } from 'react-router-dom';
 import './Dashboard.css';
 
+import { CredentialsContext } from '../../App';
+import { useContext } from 'react';
+
 function Dashboard() {
+  const [credentials] = useContext(CredentialsContext);
+
   return (
     <div className="main">
       <div className="dashboard">
         <div className="dashboard-message">
-          <h2>Good morning, Stranger!</h2>
+          <h2>Good morning, {credentials.username}</h2>
           <p>You can add, edit, delete, clear</p>
         </div>
         <div className="todo-list-container">

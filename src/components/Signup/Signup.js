@@ -1,5 +1,7 @@
+import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react/cjs/react.development';
+import { CredentialsContext } from '../../App';
 import './Signup.css';
 
 function Signup() {
@@ -7,6 +9,7 @@ function Signup() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const [credentials, setCredentials] = useContext(CredentialsContext);
 
   const _error = async (response) => {
     if (!response.ok) {
@@ -32,6 +35,7 @@ function Signup() {
     })
       .then(_error)
       .then(() => {
+        setCredentials({ username, password });
         navigate('/dashboard');
       })
       .catch((error) => {
