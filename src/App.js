@@ -8,7 +8,7 @@ import PageRoutes from './components/PageRoutes/PageRoutes';
 export const CredentialsContext = React.createContext();
 
 function App() {
-  const credentialsState = useState({});
+  const credentialsState = useState({ username: 'aaa', password: 'aaaa' });
 
   return (
     <CredentialsContext.Provider value={credentialsState}>

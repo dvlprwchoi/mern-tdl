@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Dashboard.css';
 
@@ -6,6 +7,16 @@ import { useContext } from 'react';
 
 function Dashboard() {
   const [credentials] = useContext(CredentialsContext);
+
+  const [todos, setTodos] = useState([{ text: 'AAA' }]);
+  const [todoInput, setTodoInput] = useState('');
+
+  const _addTodo = (e) => {
+    e.preventDefault();
+    if (!todoInput) return;
+    setTodos([...todos, { text: todoInput }]);
+    setTodoInput('');
+  };
 
   return (
     <div className="main">
@@ -16,13 +27,15 @@ function Dashboard() {
         </div>
         <div className="todo-list-container">
           <div className="todo-list-board">
-            <li>AAA</li>
-            <li>BBB</li>
-            <li>CCC</li>
-            <li>CCC</li>
+            {todos.map((todo, index) => (
+              <div className="single-todo" key={index}>
+                <input type="checkbox" />
+                <label>{todo.text}</label>
+              </div>
+            ))}
             {/* <li>CCC</li>
             <li>CCC</li>
-            <li>CCC</li>
+            <li>CCC</li>j
             <li>CCC</li>
             <li>CCC</li>
             <li>CCC</li>
@@ -30,7 +43,7 @@ function Dashboard() {
             <li>CCC</li> */}
           </div>
           <div className="add-todo-list-div">
-            <form className="add-todo-list-form">
+            <form className="add-todo-list-form" onSubmit={_addTodo}>
               <label className="add-todo-list-input-label" htmlFor="todo">
                 Todo:
               </label>
@@ -42,8 +55,12 @@ function Dashboard() {
                 id="todo"
                 autoFocus
                 required
+                onChange={(e) => setTodoInput(e.target.value)}
+                value={todoInput}
               />
-              <button className="add-button button-small">Add</button>
+              <button className="add-button button-small" type="submit">
+                Add
+              </button>
             </form>
           </div>
         </div>
