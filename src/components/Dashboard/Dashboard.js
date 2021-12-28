@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 import './Dashboard.css';
 
-function Dashboard({ username }) {
+function Dashboard() {
   return (
     <div className="main">
       <div className="dashboard">
         <div className="dashboard-message">
-          <h2>Good morning, {username}!</h2>
+          <h2>Good morning, Stranger!</h2>
           <p>You can add, edit, delete, clear</p>
         </div>
         <div className="todo-list-container">
