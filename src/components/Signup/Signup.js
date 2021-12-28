@@ -1,6 +1,24 @@
+import { useState } from 'react/cjs/react.development';
 import './Signup.css';
 
 function Signup() {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const _create = (e) => {
+    e.preventDefault();
+    fetch(`http://localhost:4000/create`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        username,
+        password,
+      }),
+    });
+  };
+
   return (
     <div className="main">
       <div className="signup">
@@ -8,7 +26,7 @@ function Signup() {
           <h2>Sign Up Page</h2>
         </div>
         <div className="create-user">
-          <form className="create-user-form">
+          <form className="create-user-form" onSubmit={_create}>
             <div className="create-username-div">
               <label className="username-input-label" htmlFor="username">
                 Username:
@@ -21,6 +39,9 @@ function Signup() {
                 id="username"
                 autoFocus
                 required
+                onChange={(e) => {
+                  setUsername(e.target.value);
+                }}
               />
             </div>
             <div className="create-password-div">
@@ -34,10 +55,15 @@ function Signup() {
                 name="password"
                 id="password"
                 required
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                }}
               />
             </div>
             <div className="create-button-div buttons-div">
-              <button className="create-button button">Create</button>
+              <button className="create-button button" type="submit">
+                Create
+              </button>
             </div>
           </form>
         </div>
