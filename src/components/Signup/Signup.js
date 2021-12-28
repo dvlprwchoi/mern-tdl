@@ -4,22 +4,22 @@ import { useState } from 'react/cjs/react.development';
 import { CredentialsContext } from '../../App';
 import './Signup.css';
 
+export const _error = async (response) => {
+  if (!response.ok) {
+    // console.log(response);
+    const { message } = await response.json();
+    console.log('Error Message: ', message);
+    throw Error(message);
+  }
+  return response.json();
+};
+
 function Signup() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
   const [credentials, setCredentials] = useContext(CredentialsContext);
-
-  const _error = async (response) => {
-    if (!response.ok) {
-      // console.log(response);
-      const { message } = await response.json();
-      console.log('Error Message: ', message);
-      throw Error(message);
-    }
-    return response.json();
-  };
 
   const _create = (e) => {
     e.preventDefault();
