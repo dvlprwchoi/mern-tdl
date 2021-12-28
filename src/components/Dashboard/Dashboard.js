@@ -8,20 +8,34 @@ import { useContext } from 'react';
 function Dashboard() {
   const [credentials] = useContext(CredentialsContext);
 
-  const [todos, setTodos] = useState([{ text: 'AAA' }]);
+  const [todos, setTodos] = useState([]);
   const [todoInput, setTodoInput] = useState('');
 
   const _addTodo = (e) => {
     e.preventDefault();
     if (!todoInput) return;
-    setTodos([...todos, { completed: false, text: todoInput }]);
+    const newTodo = { completed: false, text: todoInput };
+    const newTodos = [...todos, newTodo];
+    setTodos(newTodos);
     setTodoInput('');
+    postTodos(newTodos);
   };
 
   const toggleCheckbox = (index) => {
-    const newTodos = [...todos];
-    newTodos[index].completed = !newTodos[index].completed;
-    setTodos(newTodos);
+    const newCheckboxTodos = [...todos];
+    newCheckboxTodos[index].completed = !newCheckboxTodos[index].completed;
+    setTodos(newCheckboxTodos);
+  };
+
+  const postTodos = (newTodos) => {
+    fetch(`http://localhost:4000/todos`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Basic ${credentials.username}:${credentials.password}`,
+      },
+      body: JSON.stringify(newTodos),
+    }).then(() => {});
   };
 
   return (
