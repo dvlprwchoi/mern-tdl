@@ -17,7 +17,6 @@ function Login() {
     e.preventDefault();
     fetch(`${BACKEND_URL}login`, {
       method: 'POST',
-      mode: 'cors',
       headers: {
         'Content-Type': 'application/json',
       },

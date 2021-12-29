@@ -8,7 +8,7 @@ import PageRoutes from './components/PageRoutes/PageRoutes';
 export const CredentialsContext = React.createContext();
 
 export const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-console.log(BACKEND_URL);
+// console.log(BACKEND_URL);
 
 function App() {
   const credentialsState = useState(null);

@@ -35,7 +35,6 @@ function Dashboard() {
   const postTodos = (newTodos) => {
     fetch(`${BACKEND_URL}todos`, {
       method: 'POST',
-      mode: 'cors',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Basic ${credentials.username}:${credentials.password}`,
@@ -47,7 +46,6 @@ function Dashboard() {
   useEffect(() => {
     fetch(`${BACKEND_URL}todos`, {
       method: 'GET',
-      mode: 'cors',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Basic ${credentials.username}:${credentials.password}`,

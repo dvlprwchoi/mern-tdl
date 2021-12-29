@@ -26,7 +26,6 @@ function Signup() {
     e.preventDefault();
     fetch(`${BACKEND_URL}create`, {
       method: 'POST',
-      mode: 'cors',
       headers: {
         'Content-Type': 'application/json',
       },
