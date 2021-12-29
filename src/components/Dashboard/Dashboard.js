@@ -6,7 +6,11 @@ import { CredentialsContext } from '../../App';
 import { useContext } from 'react';
 
 function Dashboard() {
-  const [credentials] = useContext(CredentialsContext);
+  const [credentials, setCredentials] = useContext(CredentialsContext);
+
+  const _logout = () => {
+    setCredentials(null);
+  };
 
   const [todos, setTodos] = useState([]);
   const [todoInput, setTodoInput] = useState('');
@@ -100,7 +104,9 @@ function Dashboard() {
             Clear Completed Todo(s)
           </button>
           <Link to="/logout">
-            <button className="logout-button button">Log Out</button>
+            <button className="logout-button button" onClick={_logout}>
+              Log Out
+            </button>
           </Link>
         </div>
       </div>
