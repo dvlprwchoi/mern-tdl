@@ -15,7 +15,7 @@ function Login() {
 
   const _login = (e) => {
     e.preventDefault();
-    fetch(`${BACKEND_URL}login`, {
+    fetch(`${BACKEND_URL}/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -33,7 +33,7 @@ function Dashboard() {
   };
 
   const postTodos = (newTodos) => {
-    fetch(`${BACKEND_URL}todos`, {
+    fetch(`${BACKEND_URL}/todos`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ function Dashboard() {
   };
 
   useEffect(() => {
-    fetch(`${BACKEND_URL}todos`, {
+    fetch(`${BACKEND_URL}/todos`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

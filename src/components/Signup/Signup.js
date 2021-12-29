@@ -24,7 +24,7 @@ function Signup() {
 
   const _create = (e) => {
     e.preventDefault();
-    fetch(`${BACKEND_URL}create`, {
+    fetch(`${BACKEND_URL}/create`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
