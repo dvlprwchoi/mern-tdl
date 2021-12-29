@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { CredentialsContext } from '../../App';
+import { CredentialsContext, BACKEND_URL } from '../../App';
 import './Login.css';
 
 import { _error } from '../Signup/Signup';
@@ -15,8 +15,9 @@ function Login() {
 
   const _login = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:4000/login`, {
+    fetch(`${BACKEND_URL}login`, {
       method: 'POST',
+      mode: 'cors',
       headers: {
         'Content-Type': 'application/json',
       },

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Dashboard.css';
 
-import { CredentialsContext } from '../../App';
+import { CredentialsContext, BACKEND_URL } from '../../App';
 import { useContext } from 'react';
 
 function Dashboard() {
@@ -33,8 +33,9 @@ function Dashboard() {
   };
 
   const postTodos = (newTodos) => {
-    fetch(`http://localhost:4000/todos`, {
+    fetch(`${BACKEND_URL}todos`, {
       method: 'POST',
+      mode: 'cors',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Basic ${credentials.username}:${credentials.password}`,
@@ -44,8 +45,9 @@ function Dashboard() {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:4000/todos`, {
+    fetch(`${BACKEND_URL}todos`, {
       method: 'GET',
+      mode: 'cors',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Basic ${credentials.username}:${credentials.password}`,

@@ -1,7 +1,8 @@
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { CredentialsContext } from '../../App';
+import { CredentialsContext, BACKEND_URL } from '../../App';
+
 import './Signup.css';
 
 export const _error = async (response) => {
@@ -23,8 +24,9 @@ function Signup() {
 
   const _create = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:4000/create`, {
+    fetch(`${BACKEND_URL}create`, {
       method: 'POST',
+      mode: 'cors',
       headers: {
         'Content-Type': 'application/json',
       },
